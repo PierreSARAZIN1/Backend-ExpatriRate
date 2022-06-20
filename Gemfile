@@ -50,3 +50,5 @@ gem 'faker'
 gem 'table_print'
 gem 'devise'
 gem 'dotenv-rails'
+gem "devise-jwt", "~> 0.9.0"
+gem "rack-cors", "~> 1.1"
