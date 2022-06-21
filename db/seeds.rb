@@ -31,3 +31,10 @@ City.create!(
     password: '123456'
   );
 end
+
+user = User.create!(
+  email: "admin@yopmail.com",
+  password: 'adminpassword',
+  admin: true
+);
+end
