@@ -11,7 +11,7 @@ City.destroy_all
 User.destroy_all
 
 City.create!(
-  name: "paris",
+  name: "Paris",
   lat: 48.866667,
   long: 2.333333,
   picture: "https://cdn.sortiraparis.com/images/80/83517/753564-visuel-paris-tour-eiffel-rue.jpg",
@@ -37,3 +37,4 @@ user = User.create!(
   password: 'adminpassword',
   admin: true
 );
+end
