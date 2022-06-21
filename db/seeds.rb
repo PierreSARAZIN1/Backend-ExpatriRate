@@ -37,4 +37,3 @@ user = User.create!(
   password: 'adminpassword',
   admin: true
 );
-end
