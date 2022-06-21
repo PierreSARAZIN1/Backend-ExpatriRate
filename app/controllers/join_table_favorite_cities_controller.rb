@@ -7,12 +7,12 @@ class JoinTableFavoriteCitiesController < ApplicationController
   # GET /join_table_favorite_cities
   def index
     @join_table_favorite_cities = JoinTableFavoriteCity.all
-    render json: @join_table_favorite_cities.to_json(include: :users, :cities) 
+    render :json => ['city' => @join_table_favorite_cities], :include=> [:users, :cities] 
   end
 
   # GET /join_table_favorite_cities/1
   def show
-    render json: @current_user_favorite_city.to_json(include: :users, :cities) 
+    render :json => ['city' => @current_user_favorite_city], :include=> [:users, :cities]
   end
 
   # POST /join_table_favorite_cities
