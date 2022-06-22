@@ -11,8 +11,7 @@ class City < ApplicationRecord
   validates :healthcare, presence: true
   validates :internet, presence: true
   validates :safety, presence: true
-  validates :french_speaking, presence: true
 
-  has_many :join_table_favorite_cities
+  has_many :users, through: :join_table_favorite_cities
 
 end

@@ -25,6 +25,126 @@ City.create!(
   french_speaking: true
 );
 
+City.create!(
+  name: "Londres",
+  lat: 51.509093,
+  long: -0.094151,
+  picture: "https://www.ou-et-quand.net/partir/images/illustration/londres_830.jpg",
+  overall: 3.63,
+  activities: 5,
+  cost: 5093,
+  works_places: 5,
+  healthcare: 5,
+  internet: 14,
+  safety: 4,
+  french_speaking: true
+);
+
+City.create!(
+  name: "Berlin",
+  lat: 52.520007,
+  long: 13.404954,
+  picture: "https://www.visitberlin.de/system/files/image/og_image.jpg",
+  overall: 3.92,
+  activities: 5,
+  cost: 4106,
+  works_places: 5,
+  healthcare: 5,
+  internet: 19,
+  safety: 4,
+  french_speaking: false
+);
+
+City.create!(
+  name: "Seoul",
+  lat: 	37.566535,
+  long: 126.9779692,
+  picture: "https://content.r9cdn.net/rimg/dimg/c1/f7/06109851-ctry-132-171a795d569.jpg",
+  overall: 4.68,
+  activities: 4,
+  cost: 2095,
+  works_places: 5,
+  healthcare: 5,
+  internet: 23,
+  safety: 4,
+  french_speaking: false
+);
+
+City.create!(
+  name: "Singapore",
+  lat: 	1.290270,
+  long: 103.851959,
+  picture: "https://www.deptagency.com/wp-content/uploads/2021/12/Singapore.png",
+  overall: 4.24,
+  activities: 4,
+  cost: 3761,
+  works_places: 5,
+  healthcare: 5,
+  internet: 102,
+  safety: 4,
+  french_speaking: false
+);
+
+City.create!(
+  name: "Chiang Mai",
+  lat: 	18.796143,
+  long: 98.979263,
+  picture: "https://content.r9cdn.net/rimg/dimg/d4/8f/83729f7e-city-6042-162deff357a.jpg",
+  overall: 4.48,
+  activities: 4,
+  cost: 942,
+  works_places: 5,
+  healthcare: 5,
+  internet: 24,
+  safety: 4,
+  french_speaking: false
+);
+
+City.create!(
+  name: "Miami",
+  lat: 	25.7616798,
+  long: -80.1917902,
+  picture: "https://www.barnes-miami.com/wp-content/uploads/2021/03/MG_6_1_Miami.jpg",
+  overall: 4.55,
+  activities: 5,
+  cost: 5281,
+  works_places: 5,
+  healthcare: 5,
+  internet: 43,
+  safety: 2.5,
+  french_speaking: false
+);
+
+City.create!(
+  name: "Warsaw",
+  lat: 	52.237049,
+  long: 21.017532,
+  picture: "https://s.inyourpocket.com/gallery/warsaw/2020/01/Warsaw%20skyscrapers%20at%20night.jpg",
+  overall: 4.49,
+  activities: 5,
+  cost: 1777,
+  works_places: 5,
+  healthcare: 4,
+  internet: 16,
+  safety: 2.5,
+  french_speaking: false
+);
+
+City.create!(
+  name: "Quebec",
+  lat: 	46.813878,
+  long: -71.207981,
+  picture: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Ch%C3%A2teau_Frontenac%2C_Quebec_city%2C_Canada.jpg/1200px-Ch%C3%A2teau_Frontenac%2C_Quebec_city%2C_Canada.jpg",
+  overall: 3.56,
+  activities: 3.5,
+  cost: 2702,
+  works_places: 5,
+  healthcare: 4.5,
+  internet: 17,
+  safety: 2.5,
+  french_speaking: true
+);
+
 10.times do |t|
   user = User.create!(
     email: "a#{t}@yopmail.com",
