@@ -5,5 +5,5 @@ class User < ApplicationRecord
          :jwt_authenticatable,
          jwt_revocation_strategy: JwtDenylist
 
-  has_many :join_table_favorite_cities
+  has_many :cities, through: :join_table_favorite_cities
 end
