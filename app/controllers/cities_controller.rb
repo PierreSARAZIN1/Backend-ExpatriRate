@@ -18,8 +18,6 @@ class CitiesController < ApplicationController
 
   # POST /cities
   def create
-    puts "❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌❌"
-    puts current_user.admin
     @city = City.new(city_params)
 
     if @city.save
