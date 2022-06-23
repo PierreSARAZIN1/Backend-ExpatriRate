@@ -1,9 +1,9 @@
 class CitiesController < ApplicationController
   before_action :set_city, only: %i[ show update destroy ]
   before_action :authenticate_user!, except: %i[index]
-  before_action :is_admin?, only: %i[ update create destroy]
+  before_action :is_admin, only: %i[ update create destroy]
 
-
+  
   # GET /cities
   def index
     @cities = City.all
@@ -52,8 +52,9 @@ class CitiesController < ApplicationController
       params.require(:city).permit(:name, :lat, :long, :picture, :overall, :activities, :cost, :works_places, :healthcare, :internet, :safety, :french_speaking)
     end
 
-    def is_admin?
-      unless current_user.admin?
+    def is_admin
+      unless current_user.admin == true
+        render json: { message: "Uh Oh, there was a problem" }, status: 400
       end
     end
     
