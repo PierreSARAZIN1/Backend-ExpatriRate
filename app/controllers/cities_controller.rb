@@ -13,7 +13,7 @@ class CitiesController < ApplicationController
     @cities.each do |city|
       @newcities << {
         city: city,
-        country: city.country
+        country: city.country,
         favorite: city.users
       }
     end
