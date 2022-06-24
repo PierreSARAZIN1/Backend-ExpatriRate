@@ -9,6 +9,51 @@
 
 City.destroy_all
 User.destroy_all
+Country.destroy_all
+
+Country.create!(
+  name: "France"
+)
+
+Country.create!(
+  name: "United Kingdom"
+)
+
+Country.create!(
+  name: "Germany"
+)
+
+Country.create!(
+  name: "South Korea"
+)
+
+Country.create!(
+  name: "Malaysia"
+)
+
+Country.create!(
+  name: "Thailand"
+)
+
+Country.create!(
+  name: "United State"
+)
+
+Country.create!(
+  name: "Poland"
+)
+
+Country.create!(
+  name: "Canada"
+)
+
+Country.create!(
+  name: "Thailand"
+)
+
+Country.create!(
+  name: "Japan"
+)
 
 City.create!(
   name: "Paris",
@@ -22,11 +67,28 @@ City.create!(
   healthcare: 5,
   internet: 24,
   safety: 2.5,
-  french_speaking: true
+  french_speaking: true,
+  country_id: Country.find_by(name: "France").id
 );
 
 City.create!(
-  name: "Londres",
+  name: "Marseille",
+  lat: 43.296398,
+  long: 5.370000,
+  picture: "https://www.okvoyage.com/wp-content/uploads/2020/03/marseille-france.jpg",
+  overall: 2.96,
+  activities: 3,
+  cost: 3333,
+  works_places: 5,
+  healthcare: 5,
+  internet: 24,
+  safety: 2.5,
+  french_speaking: true,
+  country_id: Country.find_by(name: "France").id
+);
+
+City.create!(
+  name: "London",
   lat: 51.509093,
   long: -0.094151,
   picture: "https://www.ou-et-quand.net/partir/images/illustration/londres_830.jpg",
@@ -37,7 +99,8 @@ City.create!(
   healthcare: 5,
   internet: 14,
   safety: 4,
-  french_speaking: true
+  french_speaking: true,
+  country_id: Country.find_by(name: "United Kingdom").id
 );
 
 City.create!(
@@ -52,7 +115,8 @@ City.create!(
   healthcare: 5,
   internet: 19,
   safety: 4,
-  french_speaking: false
+  french_speaking: false,
+  country_id: Country.find_by(name: "Germany").id
 );
 
 City.create!(
@@ -67,7 +131,8 @@ City.create!(
   healthcare: 5,
   internet: 23,
   safety: 4,
-  french_speaking: false
+  french_speaking: false,
+  country_id: Country.find_by(name: "South Korea").id
 );
 
 City.create!(
@@ -82,7 +147,8 @@ City.create!(
   healthcare: 5,
   internet: 102,
   safety: 4,
-  french_speaking: false
+  french_speaking: false,
+  country_id: Country.find_by(name: "Malaysia").id
 );
 
 City.create!(
@@ -97,7 +163,8 @@ City.create!(
   healthcare: 5,
   internet: 24,
   safety: 4,
-  french_speaking: false
+  french_speaking: false,
+  country_id: Country.find_by(name: "Thailand").id
 );
 
 City.create!(
@@ -112,7 +179,8 @@ City.create!(
   healthcare: 5,
   internet: 43,
   safety: 2.5,
-  french_speaking: false
+  french_speaking: false,
+  country_id: Country.find_by(name: "United State").id
 );
 
 City.create!(
@@ -127,11 +195,12 @@ City.create!(
   healthcare: 4,
   internet: 16,
   safety: 2.5,
-  french_speaking: false
+  french_speaking: false,
+  country_id: Country.find_by(name: "Poland").id
 );
 
 City.create!(
-  name: "Quebec",
+  name: "Quebec City",
   lat: 	46.813878,
   long: -71.207981,
   picture: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Ch%C3%A2teau_Frontenac%2C_Quebec_city%2C_Canada.jpg/1200px-Ch%C3%A2teau_Frontenac%2C_Quebec_city%2C_Canada.jpg",
@@ -142,7 +211,40 @@ City.create!(
   healthcare: 4.5,
   internet: 17,
   safety: 2.5,
-  french_speaking: true
+  french_speaking: true,
+  country_id: Country.find_by(name: "Canada").id
+);
+
+City.create!(
+  name: "Phuket",
+  lat: 	7.880448,
+  long: 98.392250,
+  picture: "https://www.asiaqua.com/wp-content/uploads/2018/12/plongee-a-la-journee-phuket-koh-phiphi-asiaqua.jpg",
+  overall: 4.31,
+  activities: 4,
+  cost: 1212,
+  works_places: 5,
+  healthcare: 4,
+  internet: 24,
+  safety: 4,
+  french_speaking: false,
+  country_id: Country.find_by(name: "Thailand").id
+);
+
+City.create!(
+  name: "Tokyo",
+  lat: 	35.709026,
+  long: 139.731992,
+  picture: "https://mediaguinee.org/wp-content/uploads/2020/09/tokyo.jpg",
+  overall: 3.88,
+  activities: 5,
+  cost: 2922,
+  works_places: 5,
+  healthcare: 5,
+  internet: 27,
+  safety: 4,
+  french_speaking: false,
+  country_id: Country.find_by(name: "Japan").id
 );
 
 10.times do |t|
