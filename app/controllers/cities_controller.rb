@@ -14,6 +14,7 @@ class CitiesController < ApplicationController
       @newcities << {
         city: city,
         country: city.country
+        favorite: city.users
       }
     end
     render json: @newcities
