@@ -14,7 +14,8 @@ class CitiesController < ApplicationController
       @newcities << {
         city: city,
         country: city.country,
-        favorite: city.users
+        favorite: city.users,
+        like: city.join_table_favorite_cities
       }
     end
     render json: @newcities
@@ -26,7 +27,8 @@ class CitiesController < ApplicationController
     render json: { 
       city: @city,
       country: @city.country,
-      favorite: @city.users
+      favorite: @city.users,
+      like: @city.join_table_favorite_cities
     }
   end
 
