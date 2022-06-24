@@ -7,13 +7,25 @@ class CitiesController < ApplicationController
   # GET /cities
   def index
     @cities = City.all
+    @countries = Country.all
+    @newcities = []
+  
+    @cities.each do |city|
+      @newcities << {
+        city: city,
+        country: city.country
+      }
+    end
+    render json: @newcities
 
-    render json: @cities
   end
 
   # GET /cities/1
   def show
-    render json: @city
+    render json: { 
+      city: @city,
+      country: @city.country
+    }
   end
 
   # POST /cities
@@ -49,7 +61,7 @@ class CitiesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def city_params
-      params.require(:city).permit(:name, :lat, :long, :picture, :overall, :activities, :cost, :works_places, :healthcare, :internet, :safety, :french_speaking)
+      params.require(:city).permit(:name, :lat, :long, :picture, :overall, :activities, :cost, :works_places, :healthcare, :internet, :safety, :french_speaking, :country_id)
     end
 
     def is_admin

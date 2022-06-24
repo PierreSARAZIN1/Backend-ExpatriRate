@@ -1,6 +1,7 @@
 # config/routes.rb
 
 Rails.application.routes.draw do
+  resources :countries
   resources :join_table_favorite_cities
   resources :cities
   devise_for :users,

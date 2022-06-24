@@ -13,5 +13,6 @@ class City < ApplicationRecord
   validates :safety, presence: true
 
   has_many :users, through: :join_table_favorite_cities
+  belongs_to :country
 
 end
