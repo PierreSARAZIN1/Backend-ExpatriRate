@@ -259,3 +259,8 @@ user = User.create!(
   password: 'adminpassword',
   admin: true
 );
+
+favorite = JoinTableFavoriteCity.create!(
+  user_id: User.all.sample.id,
+  city_id: City.all.sample.id
+)

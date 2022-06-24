@@ -14,6 +14,7 @@ class CitiesController < ApplicationController
       @newcities << {
         city: city,
         country: city.country
+        favorite: city.users
       }
     end
     render json: @newcities
@@ -24,7 +25,8 @@ class CitiesController < ApplicationController
   def show
     render json: { 
       city: @city,
-      country: @city.country
+      country: @city.country,
+      favorite: @city.users
     }
   end
 

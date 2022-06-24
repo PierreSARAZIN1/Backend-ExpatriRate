@@ -6,7 +6,8 @@ class MembersController < ApplicationController
     user = get_user_from_token
     render json: {
       message: "If you see this, you're in!",
-      user: user
+      user: user,
+      favorite: User.find(user.id).cities
     }
   end
 
