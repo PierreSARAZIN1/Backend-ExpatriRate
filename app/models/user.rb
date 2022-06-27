@@ -7,4 +7,11 @@ class User < ApplicationRecord
 
   has_many :join_table_favorite_cities
   has_many :cities, through: :join_table_favorite_cities
+
+  after_create :welcome_send
+
+  def welcome_send
+    UserMailer.welcome_email(self).deliver_now
+  end
+  
 end
