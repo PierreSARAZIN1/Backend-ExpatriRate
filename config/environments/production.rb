@@ -34,6 +34,8 @@ Rails.application.configure do
   config.active_storage.service = :local
 
   config.action_mailer.default_url_options = { :host => 'https://backend-expatrirate.herokuapp.com/' }
+  config.action_mailer.delivery_method = :mailjet_smtp
+  config.action_mailer.perform_deliveries = true
 
   # Mount Action Cable outside main process or domain.
   # config.action_cable.mount_path = nil
