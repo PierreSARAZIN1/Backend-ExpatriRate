@@ -1,5 +1,7 @@
 class CountriesController < ApplicationController
   before_action :set_country, only: %i[ show update destroy ]
+  before_action :authenticate_user!, except: %i[index]
+  before_action :is_admin, only: %i[ update create destroy]
 
   # GET /countries
   def index
@@ -35,6 +37,18 @@ class CountriesController < ApplicationController
     end
   end
 
+  def update
+    if @country.update(country_params)
+      render json: @country
+    else
+      render json: @country.errors, status: :unprocessable_entity
+    end
+  end
+
+  def destroy
+    @country.destroy
+  end
+  
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_country
@@ -45,5 +59,10 @@ class CountriesController < ApplicationController
     def country_params
       params.require(:country).permit(:city_id, :name)
 
+    end
+    def is_admin
+      unless current_user.admin == true
+        render json: { message: "Uh Oh, there was a problem" }, status: 400
+      end
     end
 end
