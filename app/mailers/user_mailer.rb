@@ -1,4 +1,7 @@
-class UserMailer < Devise::Mailer
+class UserMailer < Devise::Mailer 
+  helper :application
+  include Devise::Controllers::UrlHelpers
+  default template_path: 'devise/mailer'
   default from: 'expatrirate@gmail.com'
  
   def welcome_email(user)
@@ -8,12 +11,11 @@ class UserMailer < Devise::Mailer
   end
 
   def reset_password_instructions(record, token, opts={})
-    puts record
-    puts token
-    puts opts
-    super
-    
-
+    UserMailer.reset_password_instructions(User.first, "faketoken", {})
   end
 
+  def deliver_later
+    Devise::Mailer.delay(queue: 'my_queue').send(...)
+ end
+ 
 end
