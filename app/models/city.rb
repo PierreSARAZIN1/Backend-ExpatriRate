@@ -12,7 +12,7 @@ class City < ApplicationRecord
   validates :internet, presence: true
   validates :safety, presence: true
 
-  has_many :join_table_favorite_cities
+  has_many :join_table_favorite_cities, dependent: :destroy
   has_many :users, through: :join_table_favorite_cities
   belongs_to :country
 
