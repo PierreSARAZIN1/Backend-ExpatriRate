@@ -39,7 +39,10 @@ class CountriesController < ApplicationController
 
   def update
     if @country.update(country_params)
-      render json: @country
+      render json: { 
+        country: @country,
+        city: @country.cities
+      }
     else
       render json: @country.errors, status: :unprocessable_entity
     end

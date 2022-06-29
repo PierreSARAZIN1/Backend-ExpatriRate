@@ -4,6 +4,11 @@ class UserMailer < ApplicationMailer
   def welcome_email(user)
     @user = user 
 
-    mail(to: @user.email, subject: 'Bienvenue sur ExpatriRate !') 
+    mail(to: @user.email, subject: 'Welcome to ExpatriRate !') 
   end
+
+  def reset_password_instructions(record, token, opts={})
+    super
+  end
+
 end
