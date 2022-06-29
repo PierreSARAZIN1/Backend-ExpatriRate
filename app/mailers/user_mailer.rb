@@ -8,10 +8,11 @@ class UserMailer < ApplicationMailer
   end
 
   def reset_password_instructions(record, token, opts={})
-    super
     puts record
     puts token
     puts opts
+    super
+    
 
   end
 
