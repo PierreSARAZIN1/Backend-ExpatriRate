@@ -11,11 +11,7 @@ class UserMailer < Devise::Mailer
   end
 
   def reset_password_instructions(record, token, opts={})
-    UserMailer.reset_password_instructions(User.first, "faketoken", {})
+    super
   end
 
-  def deliver_later
-    Devise::Mailer.delay(queue: 'my_queue').send(...)
- end
- 
 end
