@@ -1,4 +1,4 @@
-class UserMailer < ApplicationMailer
+class UserMailer < Devise::Mailer
   default from: 'expatrirate@gmail.com'
  
   def welcome_email(user)
