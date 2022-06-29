@@ -9,8 +9,9 @@ class UserMailer < ApplicationMailer
 
   def reset_password_instructions(record, token, opts={})
     super
-    puts $*650
     puts record
+    mail(to: record, subject: 'Welcome to ExpatriRate !')
+
   end
 
 end
