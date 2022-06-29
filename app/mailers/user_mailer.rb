@@ -11,8 +11,6 @@ class UserMailer < ApplicationMailer
     super
     puts $*650
     puts record
-    mail(to: record, subject: 'Welcome to ExpatriRate !')
-
   end
 
 end
