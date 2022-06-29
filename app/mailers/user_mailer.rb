@@ -1,7 +1,4 @@
 class UserMailer < Devise::Mailer 
-  helper :application
-  include Devise::Controllers::UrlHelpers
-  default template_path: 'devise/mailer'
   default from: 'expatrirate@gmail.com'
  
   def welcome_email(user)
