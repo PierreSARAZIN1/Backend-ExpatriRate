@@ -5,10 +5,10 @@ require_relative "application"
 Rails.application.initialize!
 
 ActionMailer::Base.smtp_settings = {
-  :user_name => ENV['MAILJET_LOGIN'],
-  :password => ENV['MAILJET_PWD'],
+  :user_name => ENV['SENDBLUE_LOGIN'],
+  :password => ENV['SENDBLUE_PWD'],
   :domain => 'https://backend-expatrirate.herokuapp.com/',
-  :address => 'in-v3.mailjet.com',
+  :address => 'smtp-relay.sendinblue.com',
   :port => 587,
   :authentication => :plain,
   :enable_starttls_auto => true
