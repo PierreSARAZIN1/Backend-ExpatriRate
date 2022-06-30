@@ -75,7 +75,7 @@ City.create!(
   name: "Marseille",
   lat: 43.296398,
   long: 5.370000,
-  picture: "https://www.okvoyage.com/wp-content/uploads/2020/03/marseille-france.jpg",
+  picture: File.open(Rails.root.join('public', 'images', 'marseille.jpeg')),
   overall: 2.96,
   activities: 3,
   cost: 3333,
