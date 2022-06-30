@@ -48,10 +48,6 @@ Country.create!(
 )
 
 Country.create!(
-  name: "Thailand"
-)
-
-Country.create!(
   name: "Japan"
 )
 
