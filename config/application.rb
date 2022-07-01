@@ -16,6 +16,13 @@ module BackendExpatrirate
     # These settings can be overridden in specific environments using the files
     # in config/environments, which are processed later.
     #
+    
+       config.session_store :cookie_store, key: '_interslice_session'
+
+        # Required for all session management (regardless of session_store)
+        config.middleware.use ActionDispatch::Cookies
+
+        config.middleware.use config.session_store, config.session_options
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
 
