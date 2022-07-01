@@ -26,15 +26,6 @@ class JoinTableFavoriteCitiesController < ApplicationController
     end
   end
 
-  # PATCH/PUT /join_table_favorite_cities/1
-  # def update
-  #   if @join_table_favorite_city.update(join_table_favorite_city_params)
-  #     render json: @join_table_favorite_city
-  #   else
-  #     render json: @join_table_favorite_city.errors, status: :unprocessable_entity
-  #   end
-  # end
-
   # DELETE /join_table_favorite_cities/1
   def destroy
     @join_table_favorite_city.destroy
