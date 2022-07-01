@@ -35,7 +35,7 @@ City.create!(
   name: "Marseille",
   lat: 43.296398,
   long: 5.370000,
-  picture: "https://www.okvoyage.com/wp-content/uploads/2020/03/marseille-france.jpg",
+  picture: "https://www.marseille-tourisme.com/app/uploads/marseille-tourisme/2021/12/thumbs/vieux-port-grande-roue-vue-aerienne-noel-joomtcm-7-1920x1440.jpg",
   overall: 2.96,
   activities: 3,
   cost: 3333,
