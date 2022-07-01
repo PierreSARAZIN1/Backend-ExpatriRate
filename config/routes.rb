@@ -2,7 +2,7 @@
 
 Rails.application.routes.draw do
   resources :countries
-  resources :join_table_favorite_cities
+  resources :join_table_favorite_cities, :except => [:update]
   resources :cities
   devise_for :users,
              controllers: {
